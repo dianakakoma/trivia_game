@@ -13,9 +13,30 @@ wrongAnswers = data[0]['incorrect']
 rightAnswers = data[0]['correct']
 #print("Right answers: ",rightAnswers)
 #print("Wrong answers: ",wrongAnswers)
+
 allOptions = (*wrongAnswers, rightAnswers)
 print()
 print("Answers: ")
-for i in allOptions:
-    print(i)
+
+#listing out each of the answer options
+#for item in allOptions:
+    #print(item)
+
+#assigning a number to each possible response
+optionNum = 0
+
+while optionNum <= len(allOptions)-1:
+
+    #print(optionNum,'-',allOptions[optionNum])
+    print(allOptions[optionNum])
+    optionNum += 1
+
+   
+answer = input("What is your guess? (copy and paste your final answer)")
+if answer == "Devmynd":
+    print("One point for you!")
+    score += 1
+    print("Your score is: ", score)
+else:
+    print("Better luck next time!")
 
